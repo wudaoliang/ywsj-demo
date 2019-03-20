@@ -1,0 +1,35 @@
+﻿[
+                {"id":"root", "isroot":true, "nextNodeId":"sub1", "topic":"一、二、三次产业","isreadonly":"true"},
+
+                {"id":"sub1", "parentid":"root", "preNodeId":"root", "nextNodeId":"sub12", "topic":"第一产业（90）","isreadonly":"true"},
+                {"id":"sub12", "parentid":"sub1", "preNodeId":"sub1", "nextNodeId":"sub121", "topic":"农、林、牧、渔业（40）","isreadonly":"true"},
+                {"id":"sub121", "parentid":"sub12", "preNodeId":"sub12", "nextNodeId":"sub122", "topic":"农业"},
+				{"id":"sub122", "parentid":"sub12", "preNodeId":"sub121", "nextNodeId":"sub123", "topic":"林业"},
+				{"id":"sub123", "parentid":"sub12", "preNodeId":"sub122", "nextNodeId":"sub124", "topic":"畜牧业"},
+				{"id":"sub124", "parentid":"sub12", "preNodeId":"sub123", "nextNodeId":"sub125", "topic":"渔业"},
+				{"id":"sub125", "parentid":"sub12", "preNodeId":"sub124", "nextNodeId":"sub2", "topic":"农、林、牧、渔服务业"},
+				
+                {"id":"sub2", "parentid":"root", "preNodeId":"sub125", "nextNodeId":"sub21", "topic":"第二产业（130）","isreadonly":"true"},
+                {"id":"sub21", "parentid":"sub2", "preNodeId":"sub2", "nextNodeId":"sub22", "topic":"采矿业（30）","isreadonly":"true"},
+                {"id":"sub22", "parentid":"sub2", "preNodeId":"sub21", "nextNodeId":"sub23", "topic":"制造业（100）","isreadonly":"true"},
+				{"id":"sub23", "parentid":"sub2", "preNodeId":"sub22", "nextNodeId":"sub24", "topic":"电力、燃气及水的生产和供应业（100）","isreadonly":"true"},
+				{"id":"sub24", "parentid":"sub2", "preNodeId":"sub23", "nextNodeId":"sub3", "topic":"建筑业（100）","isreadonly":"true"},
+				
+                {"id":"sub3", "parentid":"root", "preNodeId":"sub24", "nextNodeId":"sub31", "topic":"第三产业（0）"},
+				{"id":"sub31", "parentid":"sub3", "preNodeId":"sub3", "nextNodeId":"sub311", "topic":"交通运输、仓储和邮政业（100）","isreadonly":"true"},
+				{"id":"sub311", "parentid":"sub31", "preNodeId":"sub31", "nextNodeId":"sub312", "topic":"铁路运输业（0）"},
+				{"id":"sub312", "parentid":"sub31", "preNodeId":"sub311", "nextNodeId":"sub313", "topic":"道路运输业（0）"},
+				{"id":"sub313", "parentid":"sub31", "preNodeId":"sub312", "nextNodeId":"sub314", "topic":"城市公共交通业（0）"},
+				{"id":"sub314", "parentid":"sub31", "preNodeId":"sub313", "nextNodeId":"sub315", "topic":"水上运输业（0）"},
+				{"id":"sub315", "parentid":"sub31", "preNodeId":"sub314", "nextNodeId":"sub316", "topic":"航空运输业（0）"},
+				{"id":"sub316", "parentid":"sub31", "preNodeId":"sub315", "nextNodeId":"sub32", "topic":"管道运输业（0）"},
+				{"id":"sub32", "parentid":"sub3", "preNodeId":"sub316", "nextNodeId":"sub33", "topic":"信息传输、计算机服务和软件业（87）","isreadonly":"true"},
+				{"id":"sub33", "parentid":"sub3", "preNodeId":"sub32", "nextNodeId":"sub34", "topic":"批发和零售业（35）","isreadonly":"true"},
+				{"id":"sub34", "parentid":"sub3", "preNodeId":"sub33", "nextNodeId":"sub35", "topic":"住宿和餐饮业（87）","isreadonly":"true"},
+				{"id":"sub35", "parentid":"sub3", "preNodeId":"sub34", "nextNodeId":"sub36", "topic":"金融业（162）","isreadonly":"true"},
+				{"id":"sub36", "parentid":"sub3", "preNodeId":"sub35", "nextNodeId":"sub37", "topic":"房地产业（11）","isreadonly":"true"},
+				{"id":"sub37", "parentid":"sub3", "preNodeId":"sub36", "nextNodeId":"sub38", "topic":"租赁和商务服务业（210）","isreadonly":"true"},
+				{"id":"sub38", "parentid":"sub3", "preNodeId":"sub37", "nextNodeId":"sub39", "topic":"科学研究、技术服务和地质勘查业（56）","isreadonly":"true"},
+				{"id":"sub39", "parentid":"sub3", "preNodeId":"sub38", "nextNodeId":"sub310", "topic":"水利、环境和公共设施管理业（81）","isreadonly":"true"},
+				{"id":"sub310", "parentid":"sub3", "preNodeId":"sub39", "topic":"居民服务和其他服务业（121）","isreadonly":"true"}
+            ]

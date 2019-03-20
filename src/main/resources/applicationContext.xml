@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 配置信息的读取 -->
+    <context:property-placeholder location="classpath:/dataSource.properties"/>
+
+    <!-- 开启注解支持 -->
+    <mvc:annotation-driven/>
+
+    <!-- 完成Bean创建和自动依赖注入的功能 -->
+    <context:component-scan base-package="controller, service, dao"/>
+
+    <!-- 连接池的配置,destroy-method="close"的作用是当数据库连接不使用的时候,就把该连接重新放到数据池中,方便下次使用调用 -->
+    <!--<bean id="dataSourceC3P0" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${jdbcUrl}"/>
+        <property name="user" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <property name="checkoutTimeout" value="3000"/>
+        <property name="preferredTestQuery" value="${datasource.validationQuery}"/>
+    </bean>-->
+
+    <bean id="dataSourceDruid" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${jdbcUrl}"/>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <property name="initialSize" value="${datasource.initialSize}"/>
+        <property name="minIdle" value="${datasource.minIdle}"/>
+        <property name="maxActive" value="${datasource.maxActive}"/>
+        <property name="maxWait" value="${datasource.maxWait}"/>
+        <property name="timeBetweenEvictionRunsMillis" value="${datasource.timeBetweenEvictionRunsMillis}"/>
+        <property name="minEvictableIdleTimeMillis" value="${datasource.minEvictableIdleTimeMillis}"/>
+        <property name="validationQuery" value="${datasource.validationQuery}"/>
+        <property name="testWhileIdle" value="${datasource.testWhileIdle}"/>
+        <property name="testOnBorrow" value="${datasource.testOnBorrow}"/>
+        <property name="testOnReturn" value="${datasource.testOnReturn}"/>
+        <property name="poolPreparedStatements" value="${datasource.poolPreparedStatements}"/>
+        <property name="filters" value="${datasource.filters}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="${datasource.maxPoolPreparedStatementPerConnectionSize}"/>
+        <property name="connectionProperties" value="${datasource.connectionProperties}"/>
+        <property name="useGlobalDataSourceStat" value="${datasource.useGlobalDataSourceStat}"/>
+    </bean>
+
+    <!-- Jdbc模板 -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSourceDruid"/>
+    </bean>
+
+    <!-- Jdbc模板 -->
+    <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg name="dataSource" ref="dataSourceDruid"/>
+    </bean>
+</beans>
