@@ -17,7 +17,8 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
     @Override
     public List<Node> list() {
         try {
-            String sql = "SELECT ID, PARENT_ID, ISROOT, TOPIC, ISREADONLY, PRE_NODE_ID, NEXT_NODE_ID FROM T_NODE";
+            String sql = "SELECT ID, PARENT_ID, ISROOT, TOPIC, ISREADONLY, " +
+                    "PRE_NODE_ID, NEXT_NODE_ID, DIRECTION FROM T_NODE";
             return namedParameterJdbcTemplate.query(sql, new HashMap<>(), this);
         } catch (DataAccessException e) {
             logger.error("NodeDao list error", e);
@@ -29,7 +30,7 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
     public void batchUpdate(List<Node> nodes) {
         try {
             String sql = "UPDATE T_NODE SET PARENT_ID = :PARENT_ID, ISROOT = :ISROOT, TOPIC = :TOPIC, " +
-                    " PRE_NODE_ID = :PRE_NODE_ID, NEXT_NODE_ID = :NEXT_NODE_ID WHERE ID = :ID";
+                    " PRE_NODE_ID = :PRE_NODE_ID, NEXT_NODE_ID = :NEXT_NODE_ID, DIRECTION = :DIRECTION WHERE ID = :ID";
             Map<String, Object>[] paramsArr = new HashMap[nodes.size()];
             int index = 0;
             for(Node node : nodes) {
@@ -40,6 +41,7 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
                 params.put("PRE_NODE_ID", node.getPreNodeId());
                 params.put("NEXT_NODE_ID", node.getNextNodeId());
                 params.put("ID", node.getId());
+                params.put("DIRECTION", node.getDirection());
                 paramsArr[index++] = params;
             }
             namedParameterJdbcTemplate.batchUpdate(sql, paramsArr);
@@ -52,8 +54,8 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
     @Override
     public void batchAdd(List<Node> nodes) {
         try {
-            String sql = "INSERT INTO T_NODE(ID, PARENT_ID, ISROOT, TOPIC, ISREADONLY, PRE_NODE_ID, NEXT_NODE_ID) " +
-                    " VALUES(:ID, :PARENT_ID, :ISROOT, :TOPIC, :ISREADONLY, :PRE_NODE_ID, :NEXT_NODE_ID)";
+            String sql = "INSERT INTO T_NODE(ID, PARENT_ID, ISROOT, TOPIC, ISREADONLY, PRE_NODE_ID, NEXT_NODE_ID, DIRECTION) " +
+                    " VALUES(:ID, :PARENT_ID, :ISROOT, :TOPIC, :ISREADONLY, :PRE_NODE_ID, :NEXT_NODE_ID, :DIRECTION)";
             Map<String, Object>[] paramsArr = new HashMap[nodes.size()];
             int index = 0;
             for(Node node : nodes) {
@@ -65,10 +67,10 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
                 params.put("ISREADONLY", node.isIsreadonly());
                 params.put("PRE_NODE_ID", node.getPreNodeId());
                 params.put("NEXT_NODE_ID", node.getNextNodeId());
+                params.put("DIRECTION", node.getDirection());
                 paramsArr[index++] = params;
             }
             namedParameterJdbcTemplate.batchUpdate(sql, paramsArr);
-
         } catch (DataAccessException e) {
             logger.error("NodeDao batchAdd error", e);
             throw new RuntimeException(e);
@@ -103,6 +105,7 @@ public class NodeDaoImpl extends AbstractDao<Node> implements NodeDao {
         node.setIsreadonly(resultSet.getBoolean("ISREADONLY"));
         node.setPreNodeId(resultSet.getString("PRE_NODE_ID"));
         node.setNextNodeId(resultSet.getString("NEXT_NODE_ID"));
+        node.setDirection(resultSet.getString("DIRECTION"));
         return node;
     }
 }

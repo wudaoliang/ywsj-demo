@@ -1,0 +1,34 @@
+﻿
+.homepage{background: #0a0c32 url(../image/sybj.jpg) no-repeat center 0px;width: 100%;margin: 0 auto 0;padding: 0px;overflow-y:hidden;overflow-x:hidden;height:auto;position: relative;}
+
+.b_box{float: left;width: 25%;}
+.x_box{padding: 1px;}
+.boxcenter{float: none;width:100%;border:0px solid #b2b2b2;overflow: hidden;margin: 0 0 0px;
+    background:rgba(0,0,0,0.8);border-radius: 4px;box-shadow: #ccc 1px 1px 5px;}
+.boxbody{float: left;width: 100%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbodya{float: left;width: 100%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbodyb{float: left;width: 100%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbodyl{float: left;width: 35%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbodyr{float: right;width: 65%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbody3{float: left;width: 70%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbody4{float: right;width: 30%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbody5{float: left;width: 70%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbody6{float: right;width: 30%;overflow-x:hidden;overflow-y: hidden;padding:5px 0px 5px 0px;position: relative;}
+.boxbody p{width: 100%;line-height: 40px;color: #999;font-size: 14px;text-align: center;}
+.boxcentertop{width:100%;height:36px;line-height: 36px;border-bottom: 1px solid #444;overflow: hidden;}
+.boxcentertop h1{color: #F8AC59;font-size:16px;float:left;width: auto;height: 32px;line-height: 30px;font-weight:normal;padding: 0 15px;border-radius: 2px 2px 0 0;}
+.boxcentertop h1 i{float: left;margin: 0px 5px 0 0;font-size: 16px;}
+.boxcentertop a{float:right;display:block;margin-right: 10px;cursor: pointer;}
+.boxcentertop a i{font-size: 16px;color: #b2b2b2;}
+.boxcentertop a:hover i{color: #0e9aef;}
+.boxcentertop p{float:right;margin:4px 8px 0 0;color:red}
+.boxcenterbottom{float:left;width:100%;padding:5px 0 0 10px}
+
+.list_box{width:auto; _width:auto;height:auto;background: #000f1f;overflow-x:hidden;overflow-y:auto;padding:10px;position: relative;}
+.list{ width:100%; _width:auto;background:#000f1f;font-size: 12px;border:0px solid #e1e1e1}
+.list .trhover:hover{background:#293643}
+.list tr th{text-align:center;color:#5a7c86;font-weight:normal;border-bottom:1px solid #142231;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.list tr td{text-align:center;color:#c3cfd3;border-bottom:1px solid #142231;padding: 0 4px 0 2px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+
+

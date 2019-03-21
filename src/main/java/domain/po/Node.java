@@ -22,11 +22,13 @@ public class Node {
 
     private boolean isdeleted;
 
+    private String direction;
+
     public Node() {}
 
     public Node(String id, String parentid, String preNodeId, String nextNodeId,
-                boolean isroot, String topic, boolean isreadonly,
-                boolean isadded, boolean ismodified, boolean isdeleted) {
+                boolean isroot, String topic, boolean isreadonly, boolean isadded,
+                boolean ismodified, boolean isdeleted, String direction) {
         this.id = id;
         this.parentid = parentid;
         this.preNodeId = preNodeId;
@@ -37,6 +39,7 @@ public class Node {
         this.isadded = isadded;
         this.ismodified = ismodified;
         this.isdeleted = isdeleted;
+        this.direction = direction;
     }
 
     public String getId() {
@@ -117,5 +120,13 @@ public class Node {
 
     public void setIsdeleted(boolean isdeleted) {
         this.isdeleted = isdeleted;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 }

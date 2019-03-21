@@ -1,0 +1,35 @@
+﻿[
+                {"id":"root", "isroot":true, "topic":"一、二、三次产业","isreadonly":"true"},
+
+                {"id":"sub1", "parentid":"root", "topic":"第一产业（90）","isreadonly":"true"},
+                {"id":"sub12", "parentid":"sub1", "topic":"农、林、牧、渔业（40）","isreadonly":"true"},
+                {"id":"sub121", "parentid":"sub12", "topic":"农业"},
+				{"id":"sub122", "parentid":"sub12", "topic":"林业"},
+				{"id":"sub123", "parentid":"sub12", "topic":"畜牧业"},
+				{"id":"sub124", "parentid":"sub12", "topic":"渔业"},
+				{"id":"sub125", "parentid":"sub12", "topic":"农、林、牧、渔服务业"},
+				
+                {"id":"sub2", "parentid":"root", "topic":"第二产业（130）","isreadonly":"true"},
+                {"id":"sub21", "parentid":"sub2", "topic":"采矿业（30）","isreadonly":"true"},
+                {"id":"sub22", "parentid":"sub2", "topic":"制造业（100）","isreadonly":"true"},
+				{"id":"sub23", "parentid":"sub2", "topic":"电力、燃气及水的生产和供应业（100）","isreadonly":"true"},
+				{"id":"sub24", "parentid":"sub2", "topic":"建筑业（100）","isreadonly":"true"},
+				
+                {"id":"sub3", "parentid":"root", "topic":"第三产业（0）"},
+				{"id":"sub31", "parentid":"sub3", "topic":"交通运输、仓储和邮政业（100）","isreadonly":"true"},
+				{"id":"sub311", "parentid":"sub31", "topic":"铁路运输业（0）"},
+				{"id":"sub312", "parentid":"sub31", "topic":"道路运输业（0）"},
+				{"id":"sub313", "parentid":"sub31", "topic":"城市公共交通业（0）"},
+				{"id":"sub314", "parentid":"sub31", "topic":"水上运输业（0）"},
+				{"id":"sub315", "parentid":"sub31", "topic":"航空运输业（0）"},
+				{"id":"sub3", "parentid":"sub31", "topic":"管道运输业（0）"},
+				{"id":"sub32", "parentid":"sub3", "topic":"信息传输、计算机服务和软件业（87）","isreadonly":"true"},
+				{"id":"sub33", "parentid":"sub3", "topic":"批发和零售业（35）","isreadonly":"true"},
+				{"id":"sub34", "parentid":"sub3", "topic":"住宿和餐饮业（87）","isreadonly":"true"},
+				{"id":"sub35", "parentid":"sub3", "topic":"金融业（162）","isreadonly":"true"},
+				{"id":"sub36", "parentid":"sub3", "topic":"房地产业（11）","isreadonly":"true"},
+				{"id":"sub37", "parentid":"sub3", "topic":"租赁和商务服务业（210）","isreadonly":"true"},
+				{"id":"sub38", "parentid":"sub3", "topic":"科学研究、技术服务和地质勘查业（56）","isreadonly":"true"},
+				{"id":"sub39", "parentid":"sub3", "topic":"水利、环境和公共设施管理业（81）","isreadonly":"true"},
+				{"id":"sub310", "parentid":"sub3", "topic":"居民服务和其他服务业（121）","isreadonly":"true"}
+            ]

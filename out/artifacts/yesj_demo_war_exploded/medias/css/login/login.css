@@ -1,0 +1,66 @@
+html,body {height:100%; width:100%; background: url(../../image/login/bg1.jpg) center top no-repeat ; font-size: 14px; font-family: "微软雅黑", Helvetica, Tahoma, Arial, sans-serif; color: #000;margin: 0;}
+html { background-color: #000000;}
+img { border: 0;}
+
+/* 登陆页样式 */
+.login-body {width: 600px; height:674px; margin:0 auto; position: relative;}
+.login-form {width: 230px;  height: 230px;/*background-color: rgba(0,0,0,0.3);*/ padding: 20px 37px 0px 2px; margin-top:0px; margin-right:0px; *margin-right:15px;
+    display:inline; border-radius: 5px; position:absolute; right:-185px; top:225px;}
+.login-form .check-tips {float:left; width:100%; color: #666666; margin-top: 0px; text-align:center; display:inline;}
+
+#itemBox {position: relative; border: 0px solid #ff0000;}
+#itemBox .item_icon{position: absolute; left: -45px; top: 0px;}
+.login-form .item-box .item {border-radius: 0px;}
+.login-form .item {padding: 0px 0px 0px 0px; border-bottom: 1px solid #7d9dc1; background-color: none; margin-top: 10px;}
+.login-form .focus {border-bottom: 1px solid #00bbff;/* box-shadow: 0 0 4px #4baaf4;*/}
+/*.login-form .icon-login-user,
+.login-form .icon-login-pwd,
+.login-form .icon-login-verifycode {display: inline-block; margin-right: 4px; width: 20px; height: 20px; vertical-align: middle; background: url("../image/login/icon24_login.png") no-repeat;}
+.login-form .icon-login-user {background-position: 0 0;}
+.login-form .icon-login-pwd {background-position: -56px 0;}
+.login-form .icon-login-verifycode { background-position: -24px 0;}*/
+.login-form input {padding: 6px 0; width: 100%; height: 20px; line-height: 20px; font-size: 14px; font-family: "微软雅黑", arial, sans-serif; vertical-align: middle;
+    border: 0 none; background-color: transparent; outline: 0; resize: none; color:#e2ffff; *padding: 7px 0;
+}
+.placeholder_un{top: 13px;}
+.placeholder_pwd{top: 69px;}
+.placeholder_check{top: 125px;}
+
+/*按钮*/
+.login-form .login_btn_panel{ width: 215px; margin-top: 50px;margin-left: -7px; background: none; position: relative;}
+.login-form .login-btn {float: left;width: 100%; height: 37px;font-size: 14px;font-weight: bold; font-family: '微软雅黑',arial,verdana; color: #1a364b; text-align: center;
+    vertical-align: middle; cursor: pointer; border: 0;background: none;background: url(../../image/login/login_btn.png) center top no-repeat ;
+    -moz-border-radius: 50px; /* Gecko browsers */
+    -webkit-border-radius: 50px; /* Webkit browsers */
+    border-radius:50px; /* W3C syntax */
+}
+
+.login-form .login-btn:hover { color: #008aff;}
+.login-form .login-btn[disabled] { opacity: 0.6; filter: alpha(opacity=60); cursor: default; box-shadow: none;}
+
+.login-form .login-pkibtn {float: left; width: 100%; height: 33px; font-size: 14px; font-family: '微软雅黑',arial,verdana; color: #b4ddff; text-align: center;
+    vertical-align: middle; cursor: pointer; background: none; margin-top:10px;border: 0px solid #356697;
+    -moz-border-radius: 50px; /* Gecko browsers */
+    -webkit-border-radius: 50px;  /* Webkit browsers */
+    border-radius:50px; /* W3C syntax */
+}
+.login-form .login-pkibtn:hover { background: none; color: #fff; border: 0px solid #6b8fb3;}
+.login-form .login-pkibtn[disabled] { opacity: 0.6; filter: alpha(opacity=60); cursor: default; box-shadow: none;}
+p.ts{font-size: 12px; height: 12px; line-height: 12px; margin-top:20px; margin-bottom:-15px;color: #00bfff;}
+
+/*placeholder*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#5781af;}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#5781af;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#5781af;}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#5781af;}
+
+
+
+
+
+
+

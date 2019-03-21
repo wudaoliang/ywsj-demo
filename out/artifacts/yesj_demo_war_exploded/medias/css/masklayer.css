@@ -1,0 +1,41 @@
+﻿#fullbg {
+    background-color: #fff;
+    display: none;
+    z-index: 9998;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    filter: Alpha(Opacity=50);
+    _filter: alpha(opacity=50);
+    /* IE */
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    /* Moz + FF */
+    opacity: 0.5;
+}
+
+#dialog {
+    position: absolute;
+    width: 200px;
+    height: 54px;
+    display: none;
+    z-index: 9999;
+    background: url("../image/masklayer/maskLayer.gif") top left no-repeat;
+}
+
+#dialog_content {
+    width: 200px;
+    height: 54px;
+    background: url("../image/masklayer/maskLayerRight.gif") top right no-repeat;
+}
+
+#innerContent {
+    width: 200px;
+    height: 54px;
+    background: url("../image/masklayer/loading.gif") 10px 10px no-repeat;
+    color: red;
+    padding-top: 15px;
+    font-size: small !important;
+    font-size: 12px;
+    padding-left: 15px;
+}
