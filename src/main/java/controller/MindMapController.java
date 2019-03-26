@@ -27,8 +27,7 @@ public class MindMapController {
     }
 
     @RequestMapping(value = "/getMindMapData", produces = "text/html;charset=UTF-8")
-    @ResponseBody
-    public String getMindMapData() {
+    public @ResponseBody String getMindMapData() {
         try {
             List<Node> nodes = mindMapService.getMindMapData();
             return JSON.toJSONString(nodes);
